@@ -1,0 +1,126 @@
+body {
+  font-size: 16px;
+  background-color: #e5eff5;
+  display: flex;
+  font-family: 'Karla', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 376px) {
+  body {
+    height: 100vh;
+  }
+}
+
+.content {
+  display: grid;
+  background-color: white;
+  border-radius: 8px;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  font-family: 'Karla', sans-serif;
+  max-width: 680px;
+}
+
+@media (max-width: 375px) {
+  .content {
+    margin: 1rem;
+  }
+}
+
+.top, .left, .right {
+  padding: 28px;
+}
+
+.top {
+  grid-column: 1 / span 2;
+}
+
+.top .main-title {
+  color: #2ab2af;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.top .sub-headline {
+  color: #c0df34;
+  font-weight: 500;
+}
+
+.top p {
+  color: #98a6bd;
+}
+
+.bottom {
+  background-color: #2ab2af;
+  color: white;
+  grid-column: 1 / span 2;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (min-width: 376px) {
+  .bottom {
+    display: grid;
+  }
+}
+
+.bottom .left .content-title, .bottom .right .content-title {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+}
+
+.bottom .left {
+  grid-column: 1;
+}
+
+.bottom .left .price-section {
+  margin-bottom: 1rem;
+  color: rgba(229, 239, 245, 0.6);
+}
+
+.bottom .left .price-section .amount {
+  color: #e5eff5;
+  font-size: 1.8rem;
+}
+
+.bottom .left .button {
+  color: white;
+  border: none;
+  display: block;
+  background: #c0df34;
+  width: 100%;
+  padding: 12px 0px;
+  font-size: .9rem;
+  margin-top: 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
+  cursor: pointer;
+}
+
+.bottom .right {
+  padding: 32px;
+  grid-column: 2;
+  background-color: #2ec2c0;
+}
+
+.features {
+  list-style: none;
+  list-style-position: outside;
+  margin: 16px 0;
+}
+
+.features span {
+  display: block;
+  color: rgba(229, 239, 245, 0.8);
+  font-weight: 100;
+}

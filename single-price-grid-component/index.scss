@@ -1,0 +1,139 @@
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }    
+}
+
+@mixin desktop {
+    @media (min-width: 376px) {
+        @content;
+    }    
+}
+
+body {
+    font-size: 16px;
+    background-color: $light-gray;
+    display: flex;
+    font-family: 'Karla', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    @include desktop {
+        height: 100vh;
+    }
+}
+
+.content {
+    display: grid;
+    background-color: white;
+    border-radius: 8px;
+    width: fit-content;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    font-family: 'Karla', sans-serif;
+    max-width: 680px;
+
+    @include mobile {
+        margin: 1rem;
+    }
+}
+
+.top, .left, .right {
+    padding: 28px;
+}
+
+.top {
+    grid-column: 1 / span 2;
+
+    .main-title {
+        color: $cyan;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 0 0 1rem;
+    }
+
+    .sub-headline {
+        color: $bright-yellow;
+        font-weight: 500;
+    }
+
+    p {
+        color: $grayish-blue;
+    }
+}
+
+.bottom {
+    background-color: $cyan;
+    color: white;
+    grid-column: 1 / span 2;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    @include desktop {
+        display: grid;
+    }
+
+    .left, .right {
+        
+        .content-title {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 1.4rem;
+            font-weight: 600;
+        }
+    }
+
+    .left {
+        grid-column: 1;
+
+        .price-section {
+            margin-bottom: 1rem;
+            color: transparentize($light-gray, .4);
+            .amount {
+                color: $light-gray;
+                font-size: 1.8rem;
+            }
+        }
+
+        .button {
+            color: white;
+            border: none;
+            display: block;
+            background: $bright-yellow;
+            width: 100%;
+            padding: 12px 0px;
+            font-size: .9rem;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
+            cursor: pointer;         
+        }
+    }
+
+    .right {
+        padding: 32px;
+        grid-column: 2;
+        background-color: lighten($cyan, 4);
+    }
+}
+
+.features {
+    list-style: none;
+    list-style-position: outside;
+    margin: 16px 0;
+
+    span {
+        display: block;
+        color: transparentize($light-gray, .2);
+        font-weight: 100;
+    }
+}

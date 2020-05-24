@@ -117,11 +117,11 @@ html[theme="dark"] {
     }
 
     input:checked + .slider {
-        background-color: #2196F3;
+        background: var(--toggle-bg);
     }
 
     input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
+        box-shadow: 0 0 1px var(--toggle-bg);
     }
 
     input:checked + .slider:before {

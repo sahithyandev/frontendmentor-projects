@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Social Media Dashboard with Theme Switcher</title>
+
+  <link rel="stylesheet" href="/social-media-dashboard-with-theme-switcher/css/index.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: var(--light-text);
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <div class="light-text">
+        <h2 class="dark-text title">
+          Social Media Dashboard
+        </h2>
+        Total Followers: 23,004
+      </div>
+
+      <hr />
+
+      <!-- <div> -->
+        <label for="theme-toggle" class="light-text theme-toggle toggle-button">
+          Dark Mode
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" oninput="themeToggle(this.checked)" checked="true" />
+            <span class="slider round"></span>
+          </label>
+        </label>
+      <!-- </div> -->
+    </header>
+
+    <main>
+      <div id="first-section" class="section">
+        <div class="card" id="facebook-content">
+          <div class="inner">
+            <div class="first-part part">
+              <img src="images/icon-facebook.svg" alt="facebook-icon" class="icon" />
+              @nathanf
+            </div>
+            <div class="second-part part">
+              <div class="font-700 stat-number">1987</div>
+              <div class="light-text stat-description spread">Followers</div>
+            </div>
+
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="icon">
+              <span class="up">12 Today</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="twitter-content">
+          <div class="inner">
+            <div class="first-part part">
+              <img src="images/icon-twitter.svg" alt="twitter-icon" class="icon" />
+              @nathanf
+            </div>
+            <div class="second-part part">
+              <div class="font-700 stat-number">1044</div>
+              <div class="light-text stat-description spread">Followers</div>
+            </div>
+
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="icon">
+              <span class="up">99 Today</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="instagram-content">
+          <div class="inner">
+            <div class="first-part part">
+              <img src="images/icon-instagram.svg" alt="instagram-icon" class="icon" />
+              @realnathanf
+            </div>
+            <div class="second-part part">
+              <div class="font-700 stat-number">11k</div>
+              <div class="light-text stat-description spread">Followers</div>
+            </div>
+
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="icon">
+              <span class="up">1099 Today</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="youtube-content">
+          <div class="inner">
+
+            <div class="first-part part">
+              <img src="images/icon-youtube.svg" alt="youtube-icon" class="icon" />
+              Nathan F.
+            </div>
+            <div class="second-part part">
+              <div class="font-700 stat-number">8239</div>
+              <div class="light-text stat-description spread">Subscribers</div>
+            </div>
+
+            <div class="change">
+              <img src="./images/icon-down.svg" alt="icon">
+              <span class="down">
+                144 Today
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 class="light-text">
+        Overview - Today
+      </h2>
+
+      <div id="second-section" class="section">
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Page Views</div>
+            <img src="./images/icon-facebook.svg" alt="facebook-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">87</span>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="up-icon">
+              <span class="up">3%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Likes</div>
+            <img src="./images/icon-facebook.svg" alt="facebook-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">52</span>
+            <div class="change">
+              <img src="./images/icon-down.svg" alt="down-icon">
+              <span class="down">2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Likes</div>
+            <img src="./images/icon-instagram.svg" alt="instagram-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">5462</span>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="up-icon">
+              <span class="up">2257%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Profile Views</div>
+            <img src="./images/icon-instagram.svg" alt="instagram-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">52k</span>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="up-icon">
+              <span class="up">1375%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Retweets</div>
+            <img src="./images/icon-twitter.svg" alt="twitter-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">117</span>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="up-icon">
+              <span class="up">303%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Likes</div>
+            <img src="./images/icon-twitter.svg" alt="twitter-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">507</span>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="up-icon">
+              <span class="up">553%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Likes</div>
+            <img src="./images/icon-youtube.svg" alt="youtube-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">107</span>
+            <div class="change">
+              <img src="./images/icon-down.svg" alt="down-icon">
+              <span class="down">19%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="font-700 light-text card-title">Total Views</div>
+            <img src="./images/icon-facebook.svg" alt="facebook-icon" class="icon" />
+          </div>
+          <div class="flex">
+            <span class="font-700 stat-number">1407</span>
+            <div class="change">
+              <img src="./images/icon-down.svg" alt="down-icon">
+              <span class="down">12%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Sahithyan</a>.
+    </div>
+  </div>
+
+  <script>
+    // spread the words
+    const words = document.querySelectorAll(".spread");
+
+    words.forEach(word => {
+      wordsArray = word.innerText.split("").map(e => " " == e ? "<div>&nbsp</div>" : "<div>" + e + "</div>");
+      word.innerHTML = wordsArray.join("");
+
+      console.log(words, wordsArray);
+    })
+
+    // toggle theme
+    function themeToggle(value) {
+      console.log(value);
+      document.documentElement.setAttribute('theme', value ? 'light' : 'dark')
+    }
+  </script>
+
+</body>
+
+</html>

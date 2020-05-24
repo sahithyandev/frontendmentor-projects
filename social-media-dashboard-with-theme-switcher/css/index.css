@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --bg: #ffffff;
+  --top-bg-pattern: #f5f7ff;
+  --card-bg: #f0f2fa;
+  --light-text: hsl(228, 12%, 44%);
+  --dark-text: hsl(230, 17%, 14%);
+  --up: hsl(163, 72%, 41%);
+  --down: hsl(356, 69%, 56%);
+  --toggle-bg: hsl(230, 22%, 74%);
+  --toggle-front: white;
+  font-family: Inter;
+}
+
+html[theme="dark"] {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg--pattern: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --light-text: hsl(228, 34%, 66%);
+  --dark-text: hsl(0, 0%, 100%);
+  --toggle-bg: linear-gradient(90deg, hsl(210, 78%, 56%) , hsl(146, 68%, 55%));
+  --toggle-front: black;
+}
+
+.round, .card {
+  border-radius: 4px;
+}
+
+.flex {
+  display: flex;
+}
+
+.icon {
+  width: auto;
+  height: 24px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.card:hover {
+  filter: contrast(90%);
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.light-text, #first-section .card .inner .first-part {
+  color: var(--light-text);
+}
+
+.dark-text, #first-section .card .inner .second-part .stat-number, #second-section .card .stat-number {
+  color: var(--dark-text);
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+.font-700, .change {
+  font-weight: 700;
+}
+
+.up {
+  color: var(--up);
+}
+
+.down {
+  color: var(--down);
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: .9rem !important;
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+
+.toggle-button .switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  margin-left: 6px;
+}
+
+.toggle-button .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-button .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--toggle-bg);
+  transition: .4s;
+}
+
+.toggle-button .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--toggle-front);
+  transition: .2s;
+}
+
+.toggle-button input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.toggle-button input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.toggle-button input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.toggle-button .slider.round, .toggle-button .slider.card {
+  border-radius: 34px;
+}
+
+.toggle-button .slider.round:before, .toggle-button .slider.card:before {
+  border-radius: 50%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+}
+
+.container {
+  max-width: 80%;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+header hr {
+  width: 100%;
+  height: 1px;
+  display: none;
+}
+
+@media (max-width: 500px) {
+  header hr {
+    display: block;
+    border-bottom: 2px solid #f0f0f0;
+    margin: 10px 0;
+  }
+}
+
+header .title {
+  margin-bottom: 0px;
+}
+
+header .theme-toggle {
+  font-size: .95rem;
+}
+
+@media (max-width: 500px) {
+  header .theme-toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.section {
+  display: flex;
+}
+
+#first-section {
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#first-section .card {
+  border-radius: 4px;
+  min-width: 24%;
+  align-items: center;
+  padding-top: 4px;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+
+#first-section .card .inner {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: var(--card-bg);
+}
+
+#first-section .card .inner .first-part {
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+#first-section .card .inner .first-part img {
+  margin-right: 6px;
+}
+
+#first-section .card .inner .second-part {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 14px 0;
+}
+
+#first-section .card .inner .second-part .stat-number {
+  font-size: 2.6rem;
+}
+
+#first-section .card .inner .second-part .stat-description {
+  text-transform: uppercase;
+  width: 100%;
+  height: 1em;
+  font-weight: lighter;
+  font-size: .84rem;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.change {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-size: .7rem;
+}
+
+.change img {
+  margin-right: 4px;
+}
+
+#second-section {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#second-section .card {
+  min-width: 24%;
+  max-width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: .2s;
+}
+
+#second-section .card > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#second-section .card div:nth-child(1) {
+  margin-bottom: 16px;
+}
+
+#second-section .card .card-title {
+  font-size: .9rem;
+}
+
+#second-section .card .stat-number {
+  font-size: 1.8rem;
+}
+
+#second-section .card .change {
+  font-size: .8rem;
+}
+
+#facebook-content {
+  background: #198ff5;
+}
+
+#twitter-content {
+  background: #1ca0f2;
+}
+
+#instagram-content {
+  background-image: linear-gradient(90deg, #fdc468, #df4996);
+}
+
+#youtube-content {
+  background: #c4032a;
+}

@@ -39,9 +39,7 @@ html[theme="dark"] {
 }
 
 .card {
-  background-color: var(--card-bg);
   cursor: pointer;
-  transition: .2s;
 }
 
 .card:hover {
@@ -153,6 +151,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .2s;
   background-color: var(--bg);
 }
 
@@ -297,7 +296,7 @@ header .theme-toggle {
   max-width: 100%;
   padding: 14px 16px;
   margin-bottom: 10px;
-  transition: .2s;
+  background-color: var(--card-bg);
 }
 
 #second-section .card > div {

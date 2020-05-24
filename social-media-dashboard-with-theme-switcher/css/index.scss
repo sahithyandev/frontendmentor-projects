@@ -48,11 +48,8 @@ html[theme="dark"] {
     height: 24px;
 }
 .card {
-
     @extend .round;
-    background-color: var(--card-bg);
     cursor: pointer;
-    transition: .2s;
 
     &:hover {
         filter: contrast(90%)
@@ -149,6 +146,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .2s;
     background-color: var(--bg);
 }
 
@@ -194,7 +192,6 @@ header {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            // background-color: red;
         }
     }
 }
@@ -288,7 +285,7 @@ header {
         max-width: 100%;
         padding: 14px 16px;
         margin-bottom: 10px;
-        transition: .2s;
+        background-color: var(--card-bg);
 
         & > div {
             display: flex;

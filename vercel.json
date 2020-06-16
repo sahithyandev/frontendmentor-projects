@@ -1,7 +1,3 @@
 {
-    "public": true,
-    "routes": [
-        { "src": "/social-media-dashboard-with-theme-switcher", "dest": "/social-media-dashboard-with-theme-switcher/index.html" },
-        { "src": "/single-price-grid-component", "dest": "/single-price-grid-component/index.html" }
-    ]
+    "trailingSlash": true
 }

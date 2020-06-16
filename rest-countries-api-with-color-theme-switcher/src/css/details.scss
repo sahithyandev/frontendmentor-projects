@@ -1,0 +1,102 @@
+@import 'global';
+
+.go-back {
+    width: fit-content;
+    background-color: var(--elements);
+    display: flex;
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+    justify-content: center;
+    padding: 8px 12px;
+
+    @include desktop {
+        margin: 2%;
+    }
+}
+
+.icon {
+    margin-right: 4px;
+}
+
+.data-container {
+    display: grid;
+    margin: 0px 16px;    
+
+    @include desktop {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+.country-name {
+    font-family: 'Nunito Sans';
+    font-weight: 800;
+    margin: 18px 0 12px;
+    font-size: 1.6em;
+}
+
+.text-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+
+    @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .first-container {
+        @include desktop {
+            grid-column: 1;
+        }
+    }
+
+    .second-container {
+        @include desktop {
+            grid-column: 2 !important;
+        }
+    }
+}
+
+.content-title {
+    display: inline-block;
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+    margin: 8px 0px 3px;
+    margin-right: 6px;
+}
+
+.country-content {
+    font-weight: 400;
+}
+
+.sub-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Nunito Sans';
+    margin-top: 24px;
+
+    @include desktop {
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
+.border-countries-container {
+    @include desktop {
+        grid-column: 1 / span 2;
+    }
+    
+    .border-country {
+        display: inline-block;
+        background: var(--elements);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
+        width: fit-content;
+        padding: 3px 12px;
+        margin: 5px 5px;
+        border-radius: 4px;
+    }
+
+}

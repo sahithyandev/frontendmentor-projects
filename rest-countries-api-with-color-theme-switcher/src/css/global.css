@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--background);
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  min-width: 18px;
+  min-width: 18px;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.icon path {
+  stroke: var(--text) !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 32px;
+}
+
+.icon line, .icon polyline {
+  fill: none;
+  stroke: var(--text) !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 48px;
+}

@@ -1,0 +1,44 @@
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;        
+    }    
+}
+
+@mixin desktop {
+    @media (min-width: 376px) {
+        @content;        
+    }    
+}
+
+.container {  
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+.icon {
+    $icon-width: 1.2rem;
+    width: $icon-width;
+    height: $icon-width;
+    $max-width: 24px;
+    min-width: 18px;
+    min-width: 18px;
+    max-width: $max-width;
+    max-height: $max-width;
+
+    path {
+        stroke: var(--text) !important;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-width:32px
+    }
+
+    line, polyline {
+        fill:none;
+        stroke:var(--text) !important;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-width:48px;
+    }
+}

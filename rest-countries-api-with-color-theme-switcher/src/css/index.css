@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--background);
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  min-width: 18px;
+  min-width: 18px;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.icon path {
+  stroke: var(--text) !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 32px;
+}
+
+.icon line, .icon polyline {
+  fill: none;
+  stroke: var(--text) !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 48px;
+}
+
+.top-bar {
+  background-color: var(--elements);
+  padding: 20px 12px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+}
+
+@media (min-width: 376px) {
+  .top-bar {
+    padding: 20px 5%;
+  }
+}
+
+.top-bar .logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.top-bar .theme-changer {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.top-bar .theme-changer .dark-mode-text {
+  margin-left: 10px;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 376px) {
+  .search-container {
+    margin-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .search-container {
+    flex-direction: column;
+  }
+}
+
+.search-container .search-bar {
+  background-color: var(--elements);
+  height: 2.4rem;
+  display: flex;
+  border-radius: 4px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.336);
+  align-items: center;
+  padding: 6px 14px;
+  width: 40vw;
+}
+
+@media (max-width: 375px) {
+  .search-container .search-bar {
+    margin-top: 4%;
+    width: 85%;
+    align-self: center;
+    margin-bottom: 4%;
+  }
+}
+
+.search-container .search-bar .search-input {
+  border: none;
+  background: transparent;
+  margin-left: 18px;
+  height: inherit;
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.search-container .search-bar .search-input:focus {
+  outline: none;
+  border: none;
+}
+
+.search-container .filter {
+  font-family: 'Nunito Sans';
+  border: none;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  height: fit-content;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.26);
+  background: var(--elements);
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .search-container .filter {
+    width: 40%;
+    margin-left: 4%;
+  }
+}
+
+.search-container .filter option {
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+}
+
+.search-container .filter option:focus {
+  outline: none;
+}
+
+.search-container .filter:focus {
+  outline: none;
+}
+
+.countries {
+  padding: 0px 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 400px));
+  column-gap: 20px;
+  row-gap: 14px;
+  background-color: var(--background);
+  overflow: visible;
+}
+
+@media (max-width: 375px) {
+  .countries {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+}

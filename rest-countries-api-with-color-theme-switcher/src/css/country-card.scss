@@ -1,0 +1,34 @@
+@import 'global';
+
+.country-card-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background: var(--elements);
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.336);
+    height: 400px;
+    max-height: 410px;
+    max-width: 300px;
+    width: fit-content;
+    cursor: pointer;
+
+    @include mobile {
+        margin-bottom: 10px;
+    }
+}
+
+.name {
+    font-family: 'Nunito Sans';
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 4%;
+}
+
+.content {
+    padding: 6% 8%;
+}
+
+.content-type {
+    font-weight: 600;
+}

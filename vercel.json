@@ -1,6 +1,6 @@
 {
     "trailingSlash": true,
     "redirects": [
-        { "source": "/rest-countries-api-with-color-theme-switcher", "destination": "/rest-countries-api-with-color-theme-switcher/build" }
+        { "source": "/rest-countries-api-with-color-theme-switcher/", "destination": "/rest-countries-api-with-color-theme-switcher/build" }
     ]
 }

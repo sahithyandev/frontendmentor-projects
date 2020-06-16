@@ -14,7 +14,9 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    // background-color: red;
     background-color: var(--background);
+    min-height: 100vh;
 }
 
 .icon {

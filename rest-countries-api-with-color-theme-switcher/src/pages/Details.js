@@ -27,7 +27,7 @@ class Details extends React.Component {
                 <div className="top-bar">
                     <span className="logo">Where in the world?</span>
                     <label htmlFor="theme-toggle-checkbox" className="theme-changer-container">
-                        <input name="theme-toggler" type="checkbox" name="theme-toggler" id="theme-toggle-checkbox" style={{ display: 'none' }} onInput={this.changeTheme} />
+                        <input name="theme-toggler" type="checkbox" id="theme-toggle-checkbox" style={{ display: 'none' }} onInput={this.changeTheme} />
                         <span className="theme-changer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" className="icon">
                                 <path

@@ -4,7 +4,7 @@ import { Home, Details } from './pages'
 
 function App() {
   return (
-    <Router>
+    <Router basename={'/rest-countries-api-with-color-theme-switcher'}>
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/details" component={Details}></Route>
     </Router>

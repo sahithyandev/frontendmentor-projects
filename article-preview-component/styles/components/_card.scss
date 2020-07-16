@@ -1,0 +1,125 @@
+.card {
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    column-gap: 12px;
+    grid-template-areas:
+        "img heading"
+        "img content"
+        "img other";
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto auto auto;
+    height: fit-content;
+    max-height: 400px;
+    max-width: 720px;
+    position: relative;
+    width: 72vw;
+}
+
+.card__image {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    grid-area: img;
+    height: 100%;
+    width: 100%;
+}
+
+.card__title,.card__content,  .card__other {
+    margin: 10px 20px;
+}
+
+.card__title {
+    color: $very-dark-grayish-blue;
+    font-weight: 700;
+    grid-area: heading;
+    margin-top: 20px;
+}
+.card__content {
+    grid-area: content;
+    color: $desaturated-dark-blue;
+}
+.card__other {
+    align-items: center;
+    display: flex;
+    grid-area: other;
+    justify-content: space-between;
+}
+.card__author {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "author-img author-name"
+        "author-img date";
+    // background-color: red;
+    width: fit-content;
+    column-gap: 10px;
+    font-weight: 700;
+    font-size: .9em;
+    color: $very-dark-grayish-blue;
+    margin-bottom: 16px;
+    
+    .author__img {
+        grid-area: author-img;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    .date {
+        color: $grayish-blue;
+        font-size: .9em;
+    }
+}
+.card__share-button {
+    @extend .not-selectable;
+    align-items: center;
+    background-color: $light-grayish-blue;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 18px;
+    justify-content: center;
+    padding: 7px;
+    width: 18px;
+    position: relative;
+}
+    
+.card__share-popup {
+    @extend .not-selectable;
+    align-items: center;
+    background-color: $very-dark-grayish-blue;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    opacity: 0;
+    gap: 12px;
+    height: 40px;
+    justify-content: center;
+    min-width: 140px;
+    padding: 2px 24px;
+    position: absolute;
+    text-align: center;
+    right: -9%;
+    bottom: 28%;
+    transition: opacity .4s;
+    
+    .message {
+        font-size: .85em;
+        font-weight: 300;
+        letter-spacing: 2.5px;
+        margin-right: 4px;
+        text-transform: uppercase;
+    }
+}
+.card__share-popup::after {
+    background-color: inherit;
+    bottom: -7px;
+    content: '';
+    height: 14px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg);
+    width: 14px;
+}

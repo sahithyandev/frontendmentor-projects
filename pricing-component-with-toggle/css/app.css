@@ -1,0 +1,295 @@
+body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  font-family: Montserrat;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 100%;
+  background-color: #f6f6fe;
+}
+
+.heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.toggle-container {
+  font-size: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: grey;
+}
+
+.toggle-container input {
+  display: none;
+}
+
+.toggle-container input:checked + #toggle-box > .toggle > .circle {
+  -webkit-transform: translateX(28px);
+          transform: translateX(28px);
+}
+
+.toggle-container .toggle {
+  background-color: #696fdd;
+  border-radius: 1rem;
+  width: 48px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.toggle-container .toggle .circle {
+  display: inline-block;
+  background-color: white;
+  width: 20px;
+  height: 85%;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 68vw;
+  margin-top: 32px;
+  -ms-grid-columns: 1fr 1.2fr 1fr;
+      grid-template-columns: 1fr 1.2fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  height: 28vh;
+      grid-template-areas: "basic professional master";
+}
+
+@media (max-width: 375px) {
+  .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 40px;
+  }
+}
+
+.card-container .card {
+  background-color: white;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75%;
+  padding: 2em 1em 2.4em;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 375px) {
+  .card-container .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-container .card {
+    width: 100%;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}
+
+.card-container .card .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.card-container .card .price {
+  display: inline;
+  vertical-align: middle;
+  font-size: 1.8rem;
+  color: #413b3b;
+}
+
+.card-container .card .price .amount {
+  margin-left: 10px;
+  font-size: 2.5rem;
+}
+
+.card-container .card .options {
+  text-align: center;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
+}
+
+.card-container .card .options::before {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: rgba(222, 224, 237, 0.404);
+}
+
+.card-container .card .options .option {
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+}
+
+.card-container .card .options .option::after {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: rgba(222, 224, 237, 0.404);
+}
+
+.card-container .card .learn-more {
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: .9rem;
+  width: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(90deg, #a3a8f0, #696fdd);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 1px solid linear-gradient(90deg, #a3a8f0, #696fdd);
+}
+
+.card-container .card .learn-more:hover {
+  background: transparent;
+  border: 1px solid black;
+  color: #696fdd;
+}
+
+body > .toggle-container > #toggle-checkbox:checked + body {
+  background-color: red !important;
+}
+
+#professional {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(#a3a8f0, #696fdd);
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: professional;
+  color: white;
+  height: 80%;
+}
+
+#professional * {
+  color: white;
+}
+
+#professional .learn-more {
+  color: #696fdd;
+  background: white !important;
+}
+
+#professional .learn-more:hover {
+  background: transparent !important;
+  border: 1px solid white;
+  color: white;
+}
+
+#basic {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: basic;
+}
+
+#master {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: master;
+}
+
+#basic, #master {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 20px 0.5px rgba(0, 0, 0, 0.158);
+          box-shadow: 0px 0px 20px 0.5px rgba(0, 0, 0, 0.158);
+}
+
+#top-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+#bottom-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+* {
+  z-index: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 2px;
+}
+
+.attribution a {
+  color: #3e52a3;
+}

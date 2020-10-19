@@ -1,0 +1,138 @@
+.spartan, .spartan-400, .spartan-500, .spartan-700, .user-story .user-info .user-name, body, h1 {
+  font-family: "Spartan";
+}
+
+.spartan-400 {
+  font-weight: 400;
+}
+
+.spartan-500 {
+  font-weight: 500;
+}
+
+.spartan-700, .user-story .user-info .user-name {
+  font-weight: 700;
+}
+
+:root {
+  font-size: 15px;
+}
+
+body {
+  background-color: #f7f2f7;
+  text-align: center;
+  margin: 40px 0 20px;
+  padding: 20px;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  color: #502050;
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+.description {
+  margin: 12px auto 24px;
+  max-width: 96%;
+  color: #937b92;
+}
+
+.ratings-section {
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.rating {
+  background-color: rgba(238, 104, 164, 0.2);
+  border-radius: 6px;
+  padding: 0px 4px 4px;
+}
+
+.rating .star-rate::before {
+  content: "star star star star star";
+  display: block;
+  font-family: "Material Icons";
+  color: #ed984f;
+  margin-bottom: 6px;
+  font-size: 1.8rem;
+}
+
+.rating .rating-message {
+  color: #502050;
+}
+
+.user-stories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.user-story {
+  background-color: #511f50;
+  color: white;
+  border-radius: 10px;
+  padding: 24px 18px;
+}
+
+.user-story .user-info {
+  display: -ms-grid;
+  display: grid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "img name" "img about";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.user-story .user-info .user-img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  width: 52px;
+  border-radius: 50%;
+  height: auto;
+}
+
+.user-story .user-info .user-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: name;
+}
+
+.user-story .user-info .user-about {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: about;
+  color: #ee68a4;
+}
+
+.user-story .user-story-body {
+  text-align: left;
+  line-height: 1.55em;
+}

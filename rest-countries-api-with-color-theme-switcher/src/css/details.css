@@ -1,7 +1,14 @@
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: var(--background);
   min-height: 100vh;
 }
@@ -31,16 +38,23 @@
 }
 
 .go-back {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: var(--elements);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 4px;
   border-radius: 4px;
   margin: 4%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
   font-family: 'Nunito Sans';
   text-decoration: none;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 8px 12px;
 }
 
@@ -55,13 +69,15 @@
 }
 
 .data-container {
+  display: -ms-grid;
   display: grid;
   margin: 0px 16px;
 }
 
 @media (min-width: 376px) {
   .data-container {
-    grid-template-columns: repeat(2, 50%);
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
   }
 }
 
@@ -73,25 +89,30 @@
 }
 
 .text-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   padding-left: 10px;
 }
 
 @media (min-width: 376px) {
   .text-container {
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 376px) {
   .text-container .first-container {
+    -ms-grid-column: 1;
     grid-column: 1;
   }
 }
 
 @media (min-width: 376px) {
   .text-container .second-container {
+    -ms-grid-column: 2 !important;
     grid-column: 2 !important;
   }
 }
@@ -125,6 +146,8 @@
 
 @media (min-width: 376px) {
   .border-countries-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1 / span 2;
   }
 }
@@ -132,7 +155,10 @@
 .border-countries-container .border-country {
   display: inline-block;
   background: var(--elements);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.253);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 3px 12px;
   margin: 5px 5px;

@@ -1,13 +1,22 @@
 body {
   font-size: 16px;
   background-color: #e5eff5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  font-family: 'Karla', sans-serif;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  font-family: "Karla", sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   margin-top: 0;
   margin-bottom: 0;
+  min-height: 100vh;
 }
 
 @media (min-width: 376px) {
@@ -17,13 +26,17 @@ body {
 }
 
 .content {
+  display: -ms-grid;
   display: grid;
   background-color: white;
   border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   margin: auto;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   max-width: 680px;
 }
 
@@ -33,11 +46,15 @@ body {
   }
 }
 
-.top, .left, .right {
+.top,
+.left,
+.right {
   padding: 28px;
 }
 
 .top {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
 }
 
@@ -60,6 +77,8 @@ body {
 .bottom {
   background-color: #2ab2af;
   color: white;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -67,11 +86,13 @@ body {
 
 @media (min-width: 376px) {
   .bottom {
+    display: -ms-grid;
     display: grid;
   }
 }
 
-.bottom .left .content-title, .bottom .right .content-title {
+.bottom .left .content-title,
+.bottom .right .content-title {
   display: block;
   font-size: 1.2rem;
   margin-bottom: 1.4rem;
@@ -79,6 +100,7 @@ body {
 }
 
 .bottom .left {
+  -ms-grid-column: 1;
   grid-column: 1;
 }
 
@@ -99,16 +121,18 @@ body {
   background: #c0df34;
   width: 100%;
   padding: 12px 0px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-top: 20px;
   border-radius: 4px;
   font-weight: 600;
-  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
+  -webkit-box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
+          box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
   cursor: pointer;
 }
 
 .bottom .right {
   padding: 32px;
+  -ms-grid-column: 2;
   grid-column: 2;
   background-color: #2ec2c0;
 }

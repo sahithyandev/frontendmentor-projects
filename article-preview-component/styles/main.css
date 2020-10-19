@@ -1,16 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap");
 .not-selectable, .card__share-button, .card__share-popup {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .card {
   background-color: white;
   border-radius: 10px;
+  display: -ms-grid;
   display: grid;
-  column-gap: 12px;
-  grid-template-areas: "img heading" "img content" "img other";
-  grid-template-columns: 30% auto;
-  grid-template-rows: auto auto auto;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+      grid-template-areas: "img heading" "img content" "img other";
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   max-height: 400px;
   max-width: 720px;
@@ -21,6 +30,9 @@
 .card__image {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
   grid-area: img;
   height: 100%;
   width: 100%;
@@ -33,29 +45,47 @@
 .card__title {
   color: #48556a;
   font-weight: 700;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: heading;
   margin-top: 20px;
 }
 
 .card__content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: content;
   color: #6d7f97;
 }
 
 .card__other {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: other;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card__author {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  grid-template-areas: "author-img author-name" "author-img date";
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "author-img author-name" "author-img date";
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-  column-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
   font-weight: 700;
   font-size: .9em;
   color: #48556a;
@@ -63,6 +93,9 @@
 }
 
 .card__author .author__img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
   grid-area: author-img;
   width: 48px;
   height: 48px;
@@ -75,34 +108,47 @@
 }
 
 .card__share-button {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ecf2f8;
   border-radius: 50%;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 18px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 7px;
   width: 18px;
   position: relative;
 }
 
 .card__share-popup {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #48556a;
   border-radius: 6px;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   opacity: 0;
   gap: 12px;
   height: 40px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-width: 140px;
   padding: 2px 24px;
   position: absolute;
   text-align: center;
   right: -9%;
   bottom: 28%;
+  -webkit-transition: opacity .4s;
   transition: opacity .4s;
 }
 
@@ -123,19 +169,27 @@
   margin: auto;
   position: absolute;
   right: 0;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 14px;
 }
 
 body {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: Manrope;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #share-popup-toggle:checked ~ .card__share-popup {

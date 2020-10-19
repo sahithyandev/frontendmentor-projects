@@ -13,16 +13,16 @@ $primary: #674baf;
 }
 
 body {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     background-color: $primary;
     color: white;
-    background-image: url('./images/bg-desktop.svg');
+    background-image: url("./images/bg-desktop.svg");
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
 
     @include mobile {
-        background-image: url('./images/bg-mobile.svg');
+        background-image: url("./images/bg-mobile.svg");
     }
 }
 
@@ -40,7 +40,7 @@ body {
     // .logo {
     //     transform: scale(.8);
     //     float: left;
-        
+
     //     @include mobile {
     //         transform: scale(.5);
     //         margin: 10px;
@@ -55,11 +55,30 @@ body {
 
     display: flex;
     flex-wrap: wrap;
-
+    align-items: center;
+    gap: 40px;
+    // justify-content: space-around;
     // display: grid;
     // column-gap: 40px;
     // grid-template-columns: 3fr 2fr;
     // grid-template-rows: 100%;
+}
+
+.left {
+    // width: 50%;
+    // max-width: 540px;
+}
+
+.right {
+    // max-width: 500px;
+    width: 38%;
+    margin-left: 80px;
+
+    @include mobile {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
 }
 
 .illustration {
@@ -67,7 +86,7 @@ body {
 }
 
 h2 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-size: 2rem;
     margin-top: 40px;
 }
@@ -82,7 +101,7 @@ p {
     align-items: center;
     color: $primary;
     background-color: white;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-size: 1rem;
     padding: 14px 50px;
     font-weight: 400;
@@ -91,13 +110,13 @@ p {
     border: none;
     cursor: pointer;
     box-shadow: 0px 0px 10px -10px rgba(0, 0, 0, 0.75);
-    transition: .4s;
-    
+    transition: 0.4s;
+
     @include mobile {
         height: 50px;
         width: 80%;
     }
-    
+
     &:hover {
         box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
     }
@@ -109,29 +128,11 @@ p {
     }
 }
 
-.left {
-    // width: 50%;
-    max-width: 540px;
-}
-
-.right {
-    max-width: 500px;
-    width: 65%;
-    margin-left: 80px;
-
-    @include mobile {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
-    }
-}
-
-
 .share-icons-parent {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    
+
     @include desktop {
         margin-right: 20px;
         max-width: 80px;
@@ -143,7 +144,7 @@ p {
 
     .share-icon-container {
         padding: 4px;
-        
+
         .icon {
             width: 28px;
         }

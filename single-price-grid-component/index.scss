@@ -6,26 +6,27 @@ $grayish-blue: hsl(218, 22%, 67%);
 @mixin mobile {
     @media (max-width: 375px) {
         @content;
-    }    
+    }
 }
 
 @mixin desktop {
     @media (min-width: 376px) {
         @content;
-    }    
+    }
 }
 
 body {
     font-size: 16px;
     background-color: $light-gray;
     display: flex;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     margin-top: 0;
     margin-bottom: 0;
-    
+    min-height: 100vh;
+
     @include desktop {
         height: 100vh;
     }
@@ -38,7 +39,7 @@ body {
     width: fit-content;
     grid-template-columns: 1fr 1fr;
     margin: auto;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     max-width: 680px;
 
     @include mobile {
@@ -46,7 +47,9 @@ body {
     }
 }
 
-.top, .left, .right {
+.top,
+.left,
+.right {
     padding: 28px;
 }
 
@@ -81,8 +84,8 @@ body {
         display: grid;
     }
 
-    .left, .right {
-        
+    .left,
+    .right {
         .content-title {
             display: block;
             font-size: 1.2rem;
@@ -96,7 +99,7 @@ body {
 
         .price-section {
             margin-bottom: 1rem;
-            color: transparentize($light-gray, .4);
+            color: transparentize($light-gray, 0.4);
             .amount {
                 color: $light-gray;
                 font-size: 1.8rem;
@@ -110,12 +113,12 @@ body {
             background: $bright-yellow;
             width: 100%;
             padding: 12px 0px;
-            font-size: .9rem;
+            font-size: 0.9rem;
             margin-top: 20px;
             border-radius: 4px;
             font-weight: 600;
             box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
-            cursor: pointer;         
+            cursor: pointer;
         }
     }
 
@@ -133,7 +136,7 @@ body {
 
     span {
         display: block;
-        color: transparentize($light-gray, .2);
+        color: transparentize($light-gray, 0.2);
         font-weight: 100;
     }
 }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-logo-facebook-i">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="logo-facebook-i" clip-path="url(#clip-logo-facebook-i)">
+    <rect width="512" height="512" fill="rgba(255,255,255,0)"/>
+    <g id="logo-facebook" transform="translate(-84.2 -5.6)">
+      <path id="Subtraction_1" data-name="Subtraction 1" d="M171.5,233H96.8V57H43.2V-7H96.8V-58c0-14.075,2.38-26.993,7.073-38.4a77.852,77.852,0,0,1,19.439-28.017,83.569,83.569,0,0,1,29.133-17.161A109.3,109.3,0,0,1,188.6-147.4c25.332,0,51.738,1.956,57.5,2.7v60.4H204.9c-13.206,0-22.132,2.977-27.288,9.1-4.3,5.1-6.213,12.443-6.213,23.8V-7h67l-8.8,64H171.5V233ZM298,233h-1.757c.579,0,1.17-.028,1.757-.073V233Z" transform="translate(170 219)" fill="#ffff"/>
+    </g>
+  </g>
+</svg>

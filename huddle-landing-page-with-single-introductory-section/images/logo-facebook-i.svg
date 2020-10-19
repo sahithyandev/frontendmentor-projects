@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="logo-facebook-i" clip-path="url(#clip-path)">
+    <g id="logo-facebook-i-2" data-name="logo-facebook-i" transform="translate(1)" clip-path="url(#clip-path)">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="512" height="512" fill="rgba(255,255,255,0)"/>
+      <g id="logo-facebook" transform="translate(-41.2 27.404)">
+        <path id="Subtraction_1" data-name="Subtraction 1" d="M121.5,84.749H75.911V-22.66H43.2V-61.718H75.911V-92.843a61.342,61.342,0,0,1,4.317-23.435,47.511,47.511,0,0,1,11.863-17.1,51,51,0,0,1,17.779-10.473,66.7,66.7,0,0,1,22.065-3.553c15.46,0,31.575,1.194,35.091,1.648v36.861H141.882c-8.059,0-13.507,1.817-16.653,5.554-2.624,3.112-3.792,7.594-3.792,14.525v27.1h40.889l-5.37,39.058H121.5Zm77.2,0h-1.072c.353,0,.714-.017,1.072-.045Z" transform="translate(189.25 260)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(44 44)" fill="none" stroke="#fff" stroke-width="20">
+      <circle cx="212.5" cy="212.5" r="212.5" stroke="none"/>
+      <circle cx="212.5" cy="212.5" r="202.5" fill="none"/>
+    </g>
+  </g>
+</svg>

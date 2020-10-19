@@ -1,0 +1,319 @@
+.hidden {
+  display: none !important;
+}
+
+html {
+  --primary: hsl(180, 29%, 50%);
+}
+
+body {
+  font-family: 'Spartan';
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  background: #effafa;
+}
+
+.header-image {
+  background: var(--primary);
+  width: 100%;
+}
+
+#filters-bar {
+  background-color: white;
+  margin: 0 auto;
+  width: 80vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  top: -2rem;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#filters-bar:empty {
+  opacity: 0;
+}
+
+#filters-bar .clear {
+  --color: hsl(180, 29%, 50%);
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--color);
+}
+
+#filters-bar .clear:hover {
+  -webkit-text-decoration: underline var(--color);
+          text-decoration: underline var(--color);
+}
+
+.cards-container {
+  padding: 15px 1rem;
+}
+
+@media (min-width: 376px) {
+  .cards-container {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 3rem -0.6rem rgba(0, 0, 0, 0.418);
+          box-shadow: 0px 0px 3rem -0.6rem rgba(0, 0, 0, 0.418);
+  padding: 1rem;
+  margin: 20px 0 40px;
+  padding-top: 28px;
+  background-color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 375px) {
+  .card {
+    border-left: 5px solid var(--primary);
+  }
+}
+
+@media (min-width: 376px) {
+  .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 5fr auto;
+        grid-template-columns: auto 5fr auto;
+  }
+  .card:hover {
+    border-left: 5px solid var(--primary);
+  }
+  .card * {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+}
+
+.card .logo {
+  --width: 52px;
+  width: var(--width);
+  height: var(--width);
+}
+
+@media (max-width: 375px) {
+  .card .logo {
+    margin-top: -50px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 376px) {
+  .card .logo {
+    --width: 100px;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / span 3;
+    margin-right: 20px;
+  }
+}
+
+.card .company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 700;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4px 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (min-width: 376px) {
+  .card .company {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.card .tags {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.card .tags .tag {
+  display: inline-block;
+  font-size: .6rem;
+  padding: 8px 8px 4px;
+  text-transform: uppercase;
+  margin-left: 4px;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+}
+
+.card .tags .tag.new {
+  background: var(--primary);
+}
+
+.card hr {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .card hr {
+    display: block;
+  }
+}
+
+.card .job-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.card .job-title:hover {
+  color: var(--primary);
+}
+
+.card .details {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.473);
+  margin-bottom: 10px;
+}
+
+.card .filter-tags-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: .9rem;
+  -ms-flex-preferred-size: content;
+      flex-basis: content;
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+@media (min-width: 376px) {
+  .card .filter-tags-container {
+    max-width: 80%;
+    justify-self: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+.card .filter-tags-container .filter-tag:hover {
+  background: var(--color);
+  color: var(--background);
+}
+
+.filter-tag {
+  --background: hsl(184, 54%, 92%);
+  --color: hsl(180, 29%, 50%);
+  background-color: var(--background);
+  color: var(--color);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 10px 8px 7px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 376px) {
+  .filter-tag {
+    margin: 0px 4px 4px;
+  }
+}
+
+.delete-button {
+  background-color: var(--color);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .6rem;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #2c3a3a;
+}
+
+.filter-top {
+  background: var(--background);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  --background: hsl(184, 54%, 92%);
+  --color: hsl(180, 29%, 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4px 0 4px 6px;
+}
+
+.filter-top .filter-tag {
+  display: inline;
+  padding-right: 0px;
+  margin-right: 8px;
+}

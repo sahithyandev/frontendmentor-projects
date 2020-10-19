@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Job Listings</title>
+  <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <picture>
+    <source media="(min-width: 376px)" srcset="./images/bg-header-desktop.svg" />
+    <source srcset="./images/bg-header-mobile.svg" />
+    <img src="./images/bg-header-mobile.svg" class="header-image" alt="header image" />
+  </picture>
+
+  <div id="filters-bar"></div>
+  <div class="cards-container" id="cards-parent">
+    <div class="card" data-role="frontend" data-level="senior" data-languages="javascript html css">
+      <img alt="company logo" class="logo" src="./images/photosnap.svg" />
+      <div class="company">Photosnap
+        <div class="tags">
+          <div class="tag new">New!</div>
+          <div class="tag">Featured</div>
+        </div>
+      </div>
+      <div class="job-title">Senior Frontend Developer</div>
+      <div class="details">1d ago · Full Time · USA only</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Frontend</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Senior</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">HTML</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">CSS</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+      </div>
+    </div>
+    <div class="card" data-role="fullstack" data-level="midweight" data-languages="python" data-tools="react">
+      <img alt="company logo" class="logo" src="./images/manage.svg">
+      <div class="company">
+        Manage
+        <div class="tags">
+          <div class="tag new">New!</div>
+          <div class="tag">Featured</div>
+        </div>
+      </div>
+      <div class="job-title">Fullstack Developer</div>
+      <div class="details">1d ago · Part Time · Remote</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Fullstack</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Midweight</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Python</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">React</span>
+      </div>
+    </div>
+    <div class="card" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="sass react">
+      <img alt="company logo" class="logo" src="./images/account.svg">
+      <div class="company">Account<div class="tags">
+          <div class="tag new">New!</div>
+        </div>
+      </div>
+      <div class="job-title">Junior Frontend Developer</div>
+      <div class="details">2d ago · Part Time · USA only</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Frontend</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Junior</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">React</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Sass</span>
+      </div>
+    </div>
+    <div class="card" data-role="frontend" data-level="junior" data-languages="css javascript">
+      <img alt="company logo" class="logo" src="./images/myhome.svg">
+      <span class="company">MyHome</span>
+      <div class="job-title">Junior Frontend Developer</div>
+      <div class="details">5d ago · Contract · USA only</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Frontend</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Junior</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">CSS</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+      </div>
+    </div>
+    <div class="card" data-role="fullstack" data-level="midweight" data-languages="ruby javascript" data-tools="sass">
+      <img alt="company logo" class="logo" src="./images/loop-studios.svg">
+      <span class="company">Loop Studios</span>
+      <div class="job-title">Software Engineer</div>
+      <div class="details">1w ago · Full Time · Worldwide</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Fullstack</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Midweight</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Ruby</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Sass</span>
+      </div>
+    </div>
+    <div class="card" data-role="backend" data-level="junior" data-languages="ruby" data-tools="ror">
+      <img alt="company logo" class="logo" src="./images/faceit.svg">
+      <span class="company">FaceIt</span>
+      <div class="job-title">Junior Backend Developer</div>
+      <div class="details">2w ago · Full Time · UK only</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Backend</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Junior</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Ruby</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">RoR</span>
+      </div>
+    </div>
+    <div class="card" data-role="frontend" data-level="junior" data-languages="javascript html" data-tools="sass">
+      <img alt="company logo" class="logo" src="./images/shortly.svg">
+      <span class="company">Shortly</span>
+      <div class="job-title">Junior Developer</div>
+      <div class="details">2w ago · Full Time · Worldwide</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Frontend</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Junior</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">HTML</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Sass</span>
+      </div>
+    </div>
+    <div class="card" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="sass vue">
+      <img alt="company logo" class="logo" src="./images/insure.svg">
+      <span class="company">Insure</span>
+      <div class="job-title">Junior Frontend Developer</div>
+      <div class="details">2w ago · Full Time · USA only</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Frontend</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Junior</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Vue</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Sass</span>
+      </div>
+    </div>
+    <div class="card" data-role="fullstack" data-level="midweight" data-languages="javascript python"
+      data-tools="django">
+      <img alt="company logo" class="logo" src="./images/eyecam-co.svg">
+      <span class="company">Eyecam Co.</span>
+      <div class="job-title">Full Stack Engineer</div>
+      <div class="details">3w ago · Full Time · Worldwide</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Fullstack</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Midweight</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Python</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Django</span>
+      </div>
+    </div>
+    <div class="card" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="sass react">
+      <img alt="company logo" class="logo" src="./images/the-air-filter-company.svg">
+      <span class="company">The Air Filter Company</span>
+      <div class="job-title">Front-end Dev</div>
+      <div class="details">1mo ago · Part Time · Worldwide</div>
+      <hr style="width: 100%;">
+      <div class="filter-tags-container">
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Frontend</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Junior</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">JavaScript</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">React</span>
+        <span class="filter-tag" onclick="filterClicked(this.innerHTML)">Sass</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Sahithyan</a>.
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }    
+}
+
+@mixin desktop {
+    @media (min-width: 376px) {
+        @content;
+    }    
+}
+
+.hidden {
+    display: none !important;
+}
+
+html {
+    --primary: hsl(180, 29%, 50%);
+}
+
+body {
+    font-family: 'Spartan';
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    background: hsl(180, 52%, 96%);
+}
+
+.header-image {
+    background: var(--primary);
+    width: 100%;
+}
+
+#filters-bar {
+    background-color: white;
+    margin: 0 auto; 
+    width: 80vw;
+    height: fit-content;
+    position: relative;
+    top: -2rem;
+    opacity: 1;
+    transition: .2s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:empty {
+        opacity: 0;
+    }
+
+    .clear {        
+        --color: hsl(180, 29%, 50%);
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        text-transform: capitalize;
+        font-size: .8rem;
+        font-weight: 600;
+        color: var(--color);
+
+        &:hover {
+            text-decoration: underline var(--color);
+        }
+    }
+}
+
+.cards-container {
+    padding: 15px 1rem;
+
+    @include desktop {
+        width: 80vw;
+        margin: 0 auto;
+    }
+}
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3rem -.6rem rgba(0, 0, 0, 0.418);
+    padding: 1rem;
+    margin: 20px 0 40px;
+    padding-top: 28px;    
+    background-color: white;
+    transition: .2s;
+    cursor: pointer;
+    
+    @include mobile {
+        border-left: 5px solid var(--primary);
+    }
+    
+    display: flex;
+    flex-direction: column;
+    
+    @include desktop {
+        display: grid;
+        grid-template-columns: auto 5fr auto;
+        // grid-template-rows: 1fr 1fr auto;
+        
+        &:hover {
+            border-left: 5px solid var(--primary);
+        }
+
+        * {
+            grid-column: 2;
+        }
+    }
+
+    .logo {
+        --width: 52px;
+        width: var(--width);
+        height: var(--width);
+
+        @include mobile {
+            margin-top: -50px;
+            margin-bottom: 6px;
+        }
+
+        @include desktop {
+            --width: 100px;
+            grid-column: 1;
+            align-self: center;
+            grid-row: 1 / span 3;
+            margin-right: 20px;
+        }
+    }
+
+    .company {
+        display: flex;
+        justify-content: space-between;
+        color: var(--primary);
+        font-size: 1rem;
+        font-weight: 700;
+        align-items: center;
+        margin: 4px 0px;
+        width: fit-content;
+
+        @include desktop {
+            height: fit-content;
+        }
+    }
+
+    .tags {
+        display: inline-block;
+        margin-left: 20px;
+        .tag {
+            display: inline-block;
+            font-size: .6rem;
+            padding: 8px 8px 4px;
+            text-transform: uppercase;
+            margin-left: 4px;
+            background-color: black;
+            color: white;
+            border-radius: 40px;
+
+            &.new {
+                background: var(--primary);
+            }
+        }
+    }
+
+    hr {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    .job-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin: 10px 0;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    .details {
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.473);
+        margin-bottom: 10px;
+    }
+
+    .filter-tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: .9rem;
+        flex-basis: content;
+        grid-column: 3;
+        grid-row: 1;
+        height: fit-content;
+        align-self: center;
+        
+        @include desktop {
+            max-width: 80%;
+            justify-self: flex-end;
+            justify-content: flex-end;
+            grid-row: 1 / span 2;
+        }
+
+        .filter-tag {
+            &:hover {
+                background: var(--color);
+                color: var(--background);
+            }
+        }
+
+    }
+            
+}
+
+.filter-tag {
+    --background: hsl(184, 54%, 92%);
+    --color: hsl(180, 29%, 50%);    
+    background-color: var(--background);
+    color: var(--color);
+    width: fit-content;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 10px 8px 7px;
+    margin: 8px;
+    cursor: pointer;
+
+    @include desktop {
+        margin: 0px 4px 4px;
+    }
+}
+
+.delete-button {
+    background-color: var(--color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: .6rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsl(180, 14%, 20%);
+    }
+}
+
+.filter-top {
+    background: var(--background);
+    width: fit-content;
+    height: 40px;
+    --background: hsl(184, 54%, 92%);
+    --color: hsl(180, 29%, 50%);
+    display: flex;
+    align-items: center;
+    margin: 4px 0 4px 6px;
+
+    .filter-tag {
+        display: inline;
+        padding-right: 0px;
+        margin-right: 8px;
+    }
+}

@@ -1,0 +1,213 @@
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+@mixin desktop {
+    @media (min-width: 376px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+div.attribution {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0;
+    margin: auto;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+label {
+    color: red;
+    font-weight: 400;
+    font-size: .7rem;
+    display: inline;
+    transition: .4s;
+}
+
+.hide {
+    display: none;
+}
+
+.invalid {
+    border: 1px solid $red !important;
+    color: $red;
+    background: url('./images/icon-error.svg') no-repeat calc(100% - 7px);
+    transition: .4s;
+
+    &::placeholder {
+        color: $red;
+    }
+}
+
+body {
+    display: grid;
+    font-size: 16px;
+    font-family: Poppins;
+    background-color: $red;
+    color: white;
+    background-image: url('./images/bg-intro-mobile.png');
+    text-align: center;
+    width: fit-content;
+    row-gap: 20px;
+
+    @include mobile {
+        margin: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 4fr 1fr;
+        grid-template-areas:
+            "."
+            "left"
+            "right"
+            ".";
+    }
+    
+    @include desktop {        
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+        grid-template-areas: 
+            ". . . ."
+            ". left right ."
+            ". left right ."
+            ". . . .";
+        background-image: url('./images/bg-intro-desktop.png');
+        height: 100vh;
+        column-gap: 20px;
+        overflow: hidden;
+    }
+}
+
+.left {
+    text-align: start;
+    width: 100%;
+    @include mobile {
+        text-align: center;
+        height: fit-content;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+    
+    @include desktop {
+        margin: auto;
+    }
+    grid-area: left;
+
+    .headline {
+        font-size: 2.4rem;
+        font-weight: 700;
+
+        @include mobile {
+            font-size: 1.8rem;
+        }
+    }
+
+    .content {
+        @include mobile {
+            font-size: .9rem;
+        }
+    }
+}
+
+.right {
+    grid-area: right;
+    width: 80%;
+    margin: 0 auto;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.try-for-free {
+    grid-area: try-free;
+    background-color: $blue;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 12px 2%;
+    font-weight: 300;
+    box-shadow: 0 6px 0px 0px rgba(0, 0, 0, 0.247);
+
+    @include mobile {
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.input-container {
+    margin-bottom: 8px;
+    text-align: end;
+}
+
+.signup-card {
+    grid-area: signup-card;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.247);
+    
+    .input {
+        --padding: 12px;
+        padding: var(--padding) calc(2 * var(--padding));
+        width: calc(100% - 4 * var(--padding));
+        // margin-bottom: var(--padding);
+        border-radius: 4px;
+        font-family: Poppins;
+        border: 1px solid rgba(49, 49, 49, 0.39);
+        font-weight: 500;
+
+        &:focus {
+            outline: none;
+            border-color: rgb(0, 0, 0);
+            box-shadow: 0 0 1px .5px rgba(51, 51, 51, 0.075);
+        }
+    }
+
+    .button {
+        font-family: Poppins;
+        background-color: $green;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 12px;
+        border-radius: 4px;
+        width: 100%;
+        box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.247);
+        cursor: pointer;
+        
+        &:active {
+            background-color: hsl(154, 59%, 60%);
+        }
+    }
+
+    span {
+        color: $grayish-blue;
+        margin-top: 16px;
+        font-size: .7rem;
+        font-weight: 500;
+        margin: 16px 10px 0;        
+
+        span {
+            color: $red;
+            font-weight: 700;
+        }
+    }
+}

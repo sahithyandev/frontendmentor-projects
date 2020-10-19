@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="left">
+    <div class="headline">
+      Learn to code by watching others
+    </div>
+
+    <p class="content">
+      See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+      but understanding how developers think is invaluable.
+    </p>
+  </div>
+
+  <div class="right">
+    <div class="try-for-free">
+      <span>Try it free 7 days</span> then $20/mo. thereafter
+    </div>
+
+    <div class="signup-card">
+      <form class="signup-form">
+        <div class="input-container">
+          <input type="text" name="first-name" id="first-name" class="input" placeholder="First Name"
+            oninvalid="invalid(this.id)" required oninput="resetInvalid(this.id)" />
+          <label class="label hide" for="first-name" id="first-name-label">First Name cannot by empty</label>
+        </div>
+        <div class="input-container">
+          <input type="text" name="last-name" id="last-name" class="input" placeholder="Last Name"
+            oninvalid="invalid(this.id)" required oninput="resetInvalid(this.id)" />
+          <label class="label hide" for="last-name" id="last-name-label">Last Name cannot by empty</label>
+        </div>
+        <div class="input-container">
+          <input type="email" name="email" id="email" class="input" placeholder="Email Address" required
+            oninvalid="invalid(this.id)" oninput="resetInvalid(this.id)" />
+          <label class="label hide" for="email" id="email-label">Email cannot by empty</label>
+        </div>
+        <div class="input-container">
+          <input type="password" name="password" id="password" class="input" placeholder="Password" required
+            oninvalid="invalid(this.id)" oninput="resetInvalid(this.id)" />
+          <label class="label hide" for="password" id="password-label">Password cannot by empty</label>
+        </div>
+
+        <input type="submit" value="Claim Your Free Trial" class="button" onsubmit="submit()" />
+      </form>
+      <span>
+        By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

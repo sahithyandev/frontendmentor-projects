@@ -1,0 +1,70 @@
+/*
+	Fonts loaded
+
+	Big Shoulders Display @ 700
+	Lexend Deca @ 400
+*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+body {
+	margin: 0;
+	height: fit-content;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main {
+	display: flex;
+	border-radius: 10px;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+
+@media (max-width: 520px) {
+	body {
+		margin: 10px 20px;
+	}
+	
+	main {
+		flex-direction: column;
+	}
+	
+	.card {
+		max-width: 400px;
+	}
+}
+
+.card {
+	/* --bg is defined on each element inline-ly */
+	background: var(--bg);
+	padding: 32px;
+	color: white;
+}
+
+.card h2 {
+	font-family: "Big Shoulders Display";
+	font-weight: 700;
+	font-size: 2em;
+}
+
+.card p {
+	color: hsla(0, 0%, 100%, 0.75);
+	font-family: "Lexend Deca";
+	font-size: .9em;
+	margin-bottom: 40px;
+	line-height: 1.4em;
+}
+
+.card button {
+	background: white;
+	border-radius: 50px;
+	color: var(--bg);	
+	border: none;
+	font-weight: bold;
+	font-family: "Lexend Deca";
+	padding: 10px 20px;
+}
